@@ -1,0 +1,32 @@
+JavaScript
+/*
+1. Utiliza la consola de JavaScript para calcular:
+
+A) Los años bisiestos que habrá antes de 2050
+B) Cuántas cartas con número par y negras hay en una baraja de poker
+*/
+
+// A) //
+
+JavaScript
+
+function isLeapYear(year) {
+    return ((year % 4 == 0 && year % 100 != 0) || (year % 100 == 0 && year % 400 == 0));
+}
+
+function validateYears(start, finish) {
+    let years = [];
+
+    for (let year = start; year <= finish; year++) {
+        years.push(year);
+    }
+
+    return years.filter(isLeapYear);
+}
+
+let result = validateYears(2022, 2049);
+console.log(result);
+console.log(result.length);
+
+
+// B) //
